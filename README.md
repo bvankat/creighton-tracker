@@ -1,5 +1,5 @@
 # creighton-tracker
-Tracking NCAA tournament odds for that blue team in Omaha
+Tracking NCAA tournament odds for that blue team in Omaha.
 
 - Scrapes a few data sources for rankings and record projections. (Requests, Selenium, BeautifulSoup)
 - Pulls them into an HTML table. (.getJSON())
