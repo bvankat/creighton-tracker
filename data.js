@@ -5,13 +5,13 @@
     },
     "espn": {
         "bpi": "45",
-        "chance_sweet_16": "14.4%",
+        "chance_sweet_16": "13.6%",
         "proj_tourney_seed": "6",
         "proj_win_loss_conf": "9.6-8.4",
         "proj_win_loss_overall": "19.4-11.6",
         "seven_day_change": "2",
-        "sor": "21",
-        "sos": "87"
+        "sor": "22",
+        "sos": "83"
     },
     "kenpom": {
         "rating": "30",
@@ -27,15 +27,15 @@
         "sagarin_rate": "33"
     },
     "teamrankings": {
-        "make_tournament": "81.8%",
-        "most_likely_seed": "#6 (11.6%)",
+        "make_tournament": "81.2%",
+        "most_likely_seed": "#6 (11.7%)",
         "projected_losses": "10.0",
         "projected_wins": "21.0",
         "rank": "28",
-        "sos": "35"
+        "sos": "34"
     },
     "time": {
-        "time": "Nov 30, 12:51 AM"
+        "time": "Nov 30, 12:16 PM"
     },
     "trank": {
         "current_record": "6-1",
