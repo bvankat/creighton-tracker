@@ -18,24 +18,24 @@
         "sos": "31"
     },
     "massey": {
-        "composite": "33"
+        "composite": "24"
     },
     "ncaa": {
-        "net_rank": "38"
+        "net_rank": "47"
     },
     "sagarin": {
-        "sagarin_rate": "39"
+        "sagarin_rate": "40"
     },
     "teamrankings": {
-        "make_tournament": "78.1%",
-        "most_likely_seed": "#6 (11.4%)",
+        "make_tournament": "77.9%",
+        "most_likely_seed": "#6 (11.5%)",
         "projected_losses": "10.6",
         "projected_wins": "20.4",
         "rank": "29",
-        "sos": "20"
+        "sos": "19"
     },
     "time": {
-        "time": "Dec 02,  9:33 PM"
+        "time": "Dec 03, 11:11 AM"
     },
     "trank": {
         "current_record": "6-2",
