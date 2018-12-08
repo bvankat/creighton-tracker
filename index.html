@@ -341,7 +341,7 @@
 			
 			function FindScore(data) { // Calculate percentage chance based on RPI-like ranking system
 				 var score;
-				 if (data < 30){ score = 99; }
+				 if (data <= 30){ score = 99; }
 				 if (data > 30 && data <= 40) { score = 92; }
 				 if (data > 40 && data <= 43) { score = 85; }
 				 if (data > 43 && data <= 45) { score = 80; }
