@@ -14,14 +14,14 @@
         "sos": "27"
     },
     "kenpom": {
-        "rating": "38",
+        "rating": "39",
         "sos": "17"
     },
     "massey": {
         "composite": "27"
     },
     "ncaa": {
-        "net_rank": "41"
+        "net_rank": "56"
     },
     "polls": {
         "ap_rank": "NR",
@@ -39,7 +39,7 @@
         "sos": "13"
     },
     "time": {
-        "time": "Dec 09, 12:38 PM"
+        "time": "Dec 09,  8:25 PM"
     },
     "trank": {
         "current_record": "6-3",
@@ -49,10 +49,10 @@
     "warrennolan": {
         "current_conf_record": "0-0",
         "group1": "0-3",
-        "group2": "2-0",
-        "group3": "2-0",
+        "group2": "1-0",
+        "group3": "3-0",
         "group4": "2-0",
-        "rpi": "28",
-        "sos": "6"
+        "rpi": "32",
+        "sos": "8"
     }
 }
