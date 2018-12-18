@@ -98,8 +98,6 @@
 			    	<tr><td>ESPN SOR</td><td id="espn-sor" class="r"></td></tr>
 			    	<tr><td>KPI</td><td id="kpi-ranking" class="r"></td></tr>
 			    	<tr><td>Sagarin</td><td id="sagarin" class="r"></td></tr>
-			    	<tr><td>Bart Torvik</td><td id="trank-trank" class="r"></td></tr>
-			    	<tr><td>Massey Composite</td><td id="massey-comp" class="r"></td></tr>
 		    	</tbody>
 	    	</table>
 	    	
@@ -121,6 +119,11 @@
 						<td>Coaches Poll</td>
 						<td class="r"><span id="coaches-rank"></span></td>
 					</tr>
+
+			    	<tr><td>Bart Torvik</td><td id="trank-trank" class="r"></td></tr>
+			    	<tr><td>Massey Composite</td><td id="massey-comp" class="r"></td></tr>
+
+
 					<tr>
 						<td>Bracket Project: How many brackets have Creighton?</td>
 						<td class="r"><span id="bracketproject-count"></span>/<span id="bracketproject-totalbrackets"></span></td>
@@ -151,7 +154,7 @@
 			<table class="table">
 				<thead>
 					<tr>
-						<th>RPI</th>
+						<th>NET</th>
 						<th>SOS</th>
 						<th class="r">Group 1</th>
 						<th class="r">Group 2</th>
@@ -161,7 +164,7 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td id="warrennolan-rpi"></td>
+						<td id="ncaa-net2"></td>
 						<td id="warrennolan-sos2"></td>
 						<td id="warrennolan-group1" class="r"></td>
 						<td id="warrennolan-group2" class="r"></td>
@@ -206,37 +209,6 @@
 			</table>
 		-->	
 		
-		<!-- 
-		<h4>Coming soon: NCAA NET Metrics</h4>
-		<br />
-			<div class="row">
-				<div class="col-sm-3">
-					<p>Net Efficiency</p>
-					<p class="big">XX.X</p>
-				
-				</div>
-			
-				<div class="col-sm-3">
-					<p>Win %</p>
-					<p class="big">.XXX</p>
-				
-				</div>
-			
-				<div class="col-sm-3">
-					<p>Adjusted Win %</p>
-					<p class="big">.XXX</p>
-				
-				</div>
-			
-				<div class="col-sm-3">
-					<p>Scoring Margin</p>
-					<p class="big">XX.X</p>
-				
-				</div>
-			
-			</div>
-			
-			-->
 			
 			<br /><br />
 	    	
@@ -269,17 +241,14 @@
 			console.log(json);
 
 			$('#kenpom-rating').text(json.kenpom.rating);
-			$('#ncaa-net').text(json.ncaa.net_rank); // Using live one rather than json.ncaa.rpi_rank for more frequent updates
-			$('#ncaa-rating').text(json.warrennolan.rpi); // Using live one rather than json.ncaa.rpi_rank for more frequent updates
+			$('#ncaa-net, #ncaa-net2').text(json.ncaa.net_rank); 
 			$('#espn-rating').text(json.espn.bpi);
-			// $('#teamrankings-rating').text(json.teamrankings.rank);
 			$('#massey-comp').text(json.massey.composite);
 			
 			$('#kenpom-sos').text(json.kenpom.sos);
 			$('#espn-sos').text(json.espn.sos);
 			$('#teamrankings-sos').text(json.teamrankings.sos)
 			
-			$('#espn-proj-tourney-seed').text(json.espn.proj_tourney_seed);
 			$('#espn-wl').text(json.espn.proj_win_loss_overall);
 			$('#espn-cwl').text(json.espn.proj_win_loss_conf);
 			$('#espn-sor').text(json.espn.sor);
@@ -289,7 +258,6 @@
 			$('#coaches-rank').text(json.polls.coaches_rank);
 
 
-			$('#warrennolan-rpi').text(json.warrennolan.rpi);
 			$('#warrennolan-sos, #warrennolan-sos2').text(json.warrennolan.sos);
 			$('#warrennolan-group1').text(json.warrennolan.group1);
 			$('#warrennolan-group2').text(json.warrennolan.group2);
