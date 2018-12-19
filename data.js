@@ -15,11 +15,11 @@
         "sos": "44"
     },
     "kenpom": {
-        "rating": "39",
-        "sos": "44"
+        "rating": "40",
+        "sos": "22"
     },
     "kpi_sports": {
-        "kpi_ranking": "36"
+        "kpi_ranking": "41"
     },
     "massey": {
         "composite": "39"
@@ -43,20 +43,20 @@
         "sos": "16"
     },
     "time": {
-        "time": "Dec 18,  9:00 PM"
+        "time": "Dec 18, 11:36 PM"
     },
     "trank": {
-        "current_record": "7-3",
-        "trank": "45",
+        "current_record": "7-4",
+        "trank": "49",
         "trank_proj_record": "19-12 (10-8)",
         "trank_seed": "11"
     },
     "warrennolan": {
         "current_conf_record": "0-0",
-        "group1": "0-3",
+        "group1": "0-4",
         "group2": "1-0",
         "group3": "3-0",
         "group4": "3-0",
-        "sos": "19"
+        "sos": "10"
     }
 }
