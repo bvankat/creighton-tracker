@@ -1,62 +1,62 @@
 {
     "bracketproject": {
-        "matrix_count": "27",
+        "matrix_count": "25",
         "matrix_seed": "11",
-        "total_brackets": "38"
+        "total_brackets": "35"
     },
     "espn": {
-        "bpi": "52",
-        "chance_sweet_16": "7.7%",
+        "bpi": "41",
+        "chance_sweet_16": "9.2%",
         "proj_tourney_seed": "11",
-        "proj_win_loss_conf": "9.2-8.8",
-        "proj_win_loss_overall": "18.4-12.6",
-        "seven_day_change": "-2",
+        "proj_win_loss_conf": "10.0-8.0",
+        "proj_win_loss_overall": "19.0-12.0",
+        "seven_day_change": "8",
         "sor": "44",
-        "sos": "44"
+        "sos": "25"
     },
     "kenpom": {
-        "rating": "40",
-        "sos": "22"
+        "rating": "35",
+        "sos": "24"
     },
     "kpi_sports": {
-        "kpi_ranking": "41"
+        "kpi_ranking": "47"
     },
     "massey": {
-        "composite": "39"
+        "composite": "32"
     },
     "ncaa": {
-        "net_rank": "58"
+        "net_rank": "47"
     },
     "polls": {
         "ap_rank": "NR",
         "coaches_rank": "NR"
     },
     "sagarin": {
-        "sagarin_rate": "47"
+        "sagarin_rate": "40"
     },
     "teamrankings": {
-        "make_tournament": "68.6%",
+        "make_tournament": "75.4%",
         "most_likely_seed": "6",
-        "projected_losses": "11.3",
-        "projected_wins": "19.7",
-        "rank": "38",
-        "sos": "16"
+        "projected_losses": "11.2",
+        "projected_wins": "19.8",
+        "rank": "30",
+        "sos": "13"
     },
     "time": {
-        "time": "Dec 18, 11:36 PM"
+        "time": "Dec 31,  1:41 PM"
     },
     "trank": {
-        "current_record": "7-4",
-        "trank": "49",
+        "current_record": "9-4",
+        "trank": "40",
         "trank_proj_record": "19-12 (10-8)",
-        "trank_seed": "11"
+        "trank_seed": "9"
     },
     "warrennolan": {
         "current_conf_record": "0-0",
         "group1": "0-4",
         "group2": "1-0",
-        "group3": "3-0",
+        "group3": "4-0",
         "group4": "3-0",
-        "sos": "10"
+        "sos": "8"
     }
 }
