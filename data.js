@@ -1,25 +1,25 @@
 {
     "bracketproject": {
-        "matrix_count": "24",
+        "matrix_count": "36",
         "matrix_seed": "10",
-        "total_brackets": "35"
+        "total_brackets": "44"
     },
     "espn": {
-        "bpi": "31",
-        "chance_sweet_16": "13.3%",
-        "proj_tourney_seed": "9",
-        "proj_win_loss_conf": "11.3-6.7",
-        "proj_win_loss_overall": "20.3-10.7",
-        "seven_day_change": "18",
-        "sor": "33",
-        "sos": "14"
+        "bpi": "41",
+        "chance_sweet_16": "10.9%",
+        "proj_tourney_seed": "10",
+        "proj_win_loss_conf": "10.5-7.5",
+        "proj_win_loss_overall": "19.5-11.5",
+        "seven_day_change": "-1",
+        "sor": "39",
+        "sos": "6"
     },
     "kenpom": {
-        "rating": "30",
-        "sos": "12"
+        "rating": "33",
+        "sos": "6"
     },
     "kpi_sports": {
-        "kpi_ranking": "28"
+        "kpi_ranking": "38"
     },
     "massey": {
         "composite": "32"
@@ -32,31 +32,31 @@
         "coaches_rank": "NR"
     },
     "sagarin": {
-        "sagarin_rate": "32"
+        "sagarin_rate": "39"
     },
     "teamrankings": {
-        "make_tournament": "84.9%",
+        "make_tournament": "77.5%",
         "most_likely_seed": "6",
-        "projected_losses": "10.4",
-        "projected_wins": "20.6",
-        "rank": "29",
-        "sos": "9"
+        "projected_losses": "11.2",
+        "projected_wins": "19.8",
+        "rank": "30",
+        "sos": "10"
     },
     "time": {
-        "time": "Jan 01,  8:23 PM"
+        "time": "Jan 06, 10:29 AM"
     },
     "trank": {
-        "current_record": "10-4",
-        "trank": "32",
-        "trank_proj_record": "20-11 (11-7)",
-        "trank_seed": "8"
+        "current_record": "10-5",
+        "trank": "40",
+        "trank_proj_record": "19-12 (10-8)",
+        "trank_seed": "10"
     },
     "warrennolan": {
-        "current_conf_record": "1-0",
-        "group1": "1-4",
-        "group2": "1-0",
-        "group3": "4-0",
+        "current_conf_record": "1-1",
+        "group1": "1-5",
+        "group2": "2-0",
+        "group3": "3-0",
         "group4": "3-0",
-        "sos": "6"
+        "sos": "7"
     }
 }
