@@ -14,6 +14,9 @@
         "sor": "61",
         "sos": "10"
     },
+    "espn_bracketology": {
+        "seed": "NR"
+    },
     "kenpom": {
         "rating": "42",
         "sos": "6"
@@ -43,7 +46,7 @@
         "sos": "15"
     },
     "time": {
-        "time": "Jan 16,  1:35 AM"
+        "time": "Jan 16,  1:44 AM"
     },
     "trank": {
         "current_record": "10-7",
