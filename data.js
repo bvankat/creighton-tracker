@@ -1,25 +1,25 @@
 {
     "bracketproject": {
-        "matrix_count": "26",
+        "matrix_count": "24",
         "matrix_seed": "",
-        "total_brackets": "75"
+        "total_brackets": "76"
     },
     "espn": {
-        "bpi": "44",
-        "chance_sweet_16": "7.9%",
+        "bpi": "47",
+        "chance_sweet_16": "7.6%",
         "proj_tourney_seed": "",
-        "proj_win_loss_conf": "8.9-9.1",
-        "proj_win_loss_overall": "17.9-13.1",
-        "seven_day_change": "-4",
-        "sor": "61",
-        "sos": "10"
+        "proj_win_loss_conf": "8.5-9.5",
+        "proj_win_loss_overall": "17.5-13.5",
+        "seven_day_change": "-6",
+        "sor": "63",
+        "sos": "6"
     },
     "espn_bracketology": {
-        "seed": "No seed"
+        "seed": "NR"
     },
     "kenpom": {
-        "rating": "42",
-        "sos": "6"
+        "rating": "51",
+        "sos": "4"
     },
     "kpi_sports": {
         "kpi_ranking": "50"
@@ -28,35 +28,35 @@
         "composite": "47"
     },
     "ncaa": {
-        "net_rank": "56"
+        "net_rank": "58"
     },
     "polls": {
         "ap_rank": "NR",
         "coaches_rank": "NR"
     },
     "sagarin": {
-        "sagarin_rate": "45"
+        "sagarin_rate": "49"
     },
     "teamrankings": {
-        "make_tournament": "54.2%",
+        "make_tournament": "44.3%",
         "most_likely_seed": "12",
-        "projected_losses": "12.8",
-        "projected_wins": "18.2",
-        "rank": "37",
+        "projected_losses": "13.4",
+        "projected_wins": "17.6",
+        "rank": "42",
         "sos": "15"
     },
     "time": {
-        "time": "Jan 16,  2:49 AM"
+        "time": "Jan 17,  2:05 PM"
     },
     "trank": {
-        "current_record": "10-7",
-        "trank": "45",
-        "trank_proj_record": "18-13 (9-9)",
-        "trank_seed": "12"
+        "current_record": "10-8",
+        "trank": "50",
+        "trank_proj_record": "17-14 (8-10)",
+        "trank_seed": "6"
     },
     "warrennolan": {
-        "current_conf_record": "1-3",
-        "group1": "0-6",
+        "current_conf_record": "1-4",
+        "group1": "0-7",
         "group2": "3-1",
         "group3": "3-0",
         "group4": "3-0",
