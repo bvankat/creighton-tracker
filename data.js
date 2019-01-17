@@ -1,13 +1,13 @@
 {
     "bracketproject": {
         "matrix_count": "24",
-        "matrix_seed": "",
+        "matrix_seed": "NR",
         "total_brackets": "76"
     },
     "espn": {
         "bpi": "47",
         "chance_sweet_16": "7.6%",
-        "proj_tourney_seed": "",
+        "proj_tourney_seed": "NR",
         "proj_win_loss_conf": "8.5-9.5",
         "proj_win_loss_overall": "17.5-13.5",
         "seven_day_change": "-6",
@@ -46,7 +46,7 @@
         "sos": "15"
     },
     "time": {
-        "time": "Jan 17,  2:05 PM"
+        "time": "Jan 17,  2:14 PM"
     },
     "trank": {
         "current_record": "10-8",
