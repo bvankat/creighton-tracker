@@ -1,24 +1,24 @@
 {
     "bracketproject": {
-        "matrix_count": "30",
+        "matrix_count": "22",
         "matrix_seed": "NR",
-        "total_brackets": "99"
+        "total_brackets": "104"
     },
     "espn": {
-        "bpi": "45",
-        "chance_sweet_16": "6.6%",
-        "proj_tourney_seed": "12",
-        "proj_win_loss_conf": "9.6-8.4",
-        "proj_win_loss_overall": "18.6-12.4",
-        "seven_day_change": "3",
-        "sor": "47",
-        "sos": "11"
+        "bpi": "52",
+        "chance_sweet_16": "5.1%",
+        "proj_tourney_seed": "NR",
+        "proj_win_loss_conf": "8.6-9.4",
+        "proj_win_loss_overall": "17.6-13.4",
+        "seven_day_change": "-6",
+        "sor": "56",
+        "sos": "12"
     },
     "espn_bracketology": {
         "seed": "NR"
     },
     "kenpom": {
-        "rating": "55",
+        "rating": "56",
         "sos": "12"
     },
     "kpi_sports": {
@@ -28,7 +28,7 @@
         "composite": "42"
     },
     "ncaa": {
-        "net_rank": "62"
+        "net_rank": "61"
     },
     "polls": {
         "ap_rank": "NR",
@@ -38,15 +38,15 @@
         "sagarin_rate": "51"
     },
     "teamrankings": {
-        "make_tournament": "43.2%",
-        "most_likely_seed": "12",
+        "make_tournament": "42.3%",
+        "most_likely_seed": "11",
         "projected_losses": "13.3",
         "projected_wins": "17.7",
-        "rank": "43",
-        "sos": "25"
+        "rank": "44",
+        "sos": "27"
     },
     "time": {
-        "time": "Jan 31,  8:55 PM"
+        "time": "Feb 02,  3:01 PM"
     },
     "trank": {
         "current_record": "12-9",
@@ -60,6 +60,6 @@
         "group2": "4-2",
         "group3": "3-0",
         "group4": "3-0",
-        "sos": "6"
+        "sos": "7"
     }
 }
