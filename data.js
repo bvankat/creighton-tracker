@@ -1,65 +1,65 @@
 {
     "bracketproject": {
-        "matrix_count": "22",
+        "matrix_count": "18",
         "matrix_seed": "NR",
-        "total_brackets": "104"
+        "total_brackets": "98"
     },
     "espn": {
-        "bpi": "52",
-        "chance_sweet_16": "5.1%",
+        "bpi": "46",
+        "chance_sweet_16": "6.0%",
         "proj_tourney_seed": "NR",
-        "proj_win_loss_conf": "8.6-9.4",
-        "proj_win_loss_overall": "17.6-13.4",
-        "seven_day_change": "-6",
-        "sor": "56",
-        "sos": "12"
+        "proj_win_loss_conf": "9.0-9.0",
+        "proj_win_loss_overall": "18.1-12.9",
+        "seven_day_change": "-2",
+        "sor": "57",
+        "sos": "18"
     },
     "espn_bracketology": {
         "seed": "NR"
     },
     "kenpom": {
-        "rating": "56",
-        "sos": "12"
+        "rating": "49",
+        "sos": "13"
     },
     "kpi_sports": {
-        "kpi_ranking": "46"
+        "kpi_ranking": "45"
     },
     "massey": {
-        "composite": "42"
+        "composite": "50"
     },
     "ncaa": {
-        "net_rank": "61"
+        "net_rank": "59"
     },
     "polls": {
         "ap_rank": "NR",
         "coaches_rank": "NR"
     },
     "sagarin": {
-        "sagarin_rate": "51"
+        "sagarin_rate": "49"
     },
     "teamrankings": {
-        "make_tournament": "42.3%",
+        "make_tournament": "46.1%",
         "most_likely_seed": "11",
-        "projected_losses": "13.3",
-        "projected_wins": "17.7",
-        "rank": "44",
-        "sos": "27"
+        "projected_losses": "12.9",
+        "projected_wins": "18.1",
+        "rank": "42",
+        "sos": "29"
     },
     "time": {
-        "time": "Feb 02,  3:01 PM"
+        "time": "Feb 04,  1:57 PM"
     },
     "trank": {
-        "current_record": "12-9",
-        "trank": "51",
-        "trank_proj_record": "17-14 (8-10)",
+        "current_record": "13-9",
+        "trank": "49",
+        "trank_proj_record": "18-13 (9-9)",
         "trank_seed": "NR"
     },
     "warrennolan": {
-        "current_conf_record": "3-5",
+        "current_conf_record": "4-5",
         "group1": "1-7",
         "group2": "4-2",
-        "group3": "3-0",
+        "group3": "4-0",
         "group4": "3-0",
-        "sos": "7"
+        "sos": "9"
     }
 }
