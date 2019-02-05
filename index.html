@@ -348,7 +348,7 @@
 			 trank_score = FindScore(json.trank.trank);
 			 kpi_score = FindScore(json.kpi_sports.kpi_ranking);
 			 massey_score = FindScore(json.massey.composite);
-			 intangibles = 0;
+			 intangibles = -7; // Zegarowski broken hand
 			 
 			 //Current formula, multipliers should add to .98 to keep the gauge happy
 			 total_score = ((net_score * .13) + (kenpom_score * .13) + (espn_sor * .13) + (espn_bpi * .13) + (kpi_score * .13) + (sagarin_score * .10) + (trank_score * .08) + (massey_score * .06) + (rpi_score * .09) + intangibles);			 
