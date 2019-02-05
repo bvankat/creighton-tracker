@@ -121,7 +121,10 @@
 					</tr>
 
 			    	<tr><td>Bart Torvik</td><td id="trank-trank" class="r"></td></tr>
+			    	
 			    	<tr><td>Massey Composite</td><td id="massey-comp" class="r"></td></tr>
+
+					<tr><td>RPI</td><td id="nolan-rpi" class="r"></td></tr>
 
 
 					<tr>
@@ -136,12 +139,18 @@
 						<td>ESPN Sweet 16 chances</td>
 						<td class="r"><span id="espn-sweet16"></span></td>
 					</tr>
-					<!--
+					
 					<tr>
 						<td>CBS Sports - Jerry Palm Bracketology</td>
 						<td class="r"><span id="cbs-bracket"></span>-seed</td>
 					</tr>
-					-->
+					
+					<tr>
+						<td>TeamRankings tournament percentage</td>
+						<td id="teamrankings-rating" class="r"></td>
+					</tr>
+
+					
 				</tbody>
 			</table>
 	    	
@@ -265,6 +274,7 @@
 			$('#warrennolan-group2').text(json.warrennolan.group2);
 			$('#warrennolan-group3').text(json.warrennolan.group3);
 			$('#warrennolan-group4').text(json.warrennolan.group4);
+			$('#nolan-rpi').text(json.warrennolan.rpi);
 			
 			
 			$('#current_record').text(json.trank.current_record);
@@ -276,6 +286,8 @@
 			$('#trank-trank').text(json.trank.trank);
 		
 			$('#teamrankings-seed').text(json.teamrankings.most_likely_seed);
+			$('#teamrankings-rating').text(json.teamrankings.make_tournament);
+
 			
 			$('#kpi-ranking').text(json.kpi_sports.kpi_ranking);
 			
@@ -336,16 +348,17 @@
 			 trank_score = FindScore(json.trank.trank);
 			 kpi_score = FindScore(json.kpi_sports.kpi_ranking);
 			 massey_score = FindScore(json.massey.composite);
+			 intangibles = 0;
 			 
 			 //Current formula, multipliers should add to .98 to keep the gauge happy
-			 total_score = ((net_score * .16) + (kenpom_score * .14) + (espn_sor * .14) + (espn_bpi * .14) + (kpi_score * .14) + (sagarin_score * .10) + (trank_score * .10) + (massey_score * .06));			 
+			 total_score = ((net_score * .13) + (kenpom_score * .13) + (espn_sor * .13) + (espn_bpi * .13) + (kpi_score * .13) + (sagarin_score * .10) + (trank_score * .08) + (massey_score * .06) + (rpi_score * .09) + intangibles);			 
 			 
 			 
 			 function StatusCheck(data) {
 				 var status_message;
 				 if (data < 25) { status_message = "NIT bound." }
 				 if (data >= 25 && data < 35) { status_message = "Probably not happening." }
-				 if (data >= 35 && data < 45) { status_message = "Ignoring everything but the eye test." }
+				 if (data >= 35 && data < 45) { status_message = "Lots of possibilities in wide-open Big East." }
 				 if (data >= 45 && data < 60) { status_message = "A little nervous." }
 				 if (data >= 60 && data < 75) { status_message = "Feeling good." }
 				 if (data >= 75) { status_message = "Dancing." }
