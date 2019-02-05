@@ -4,6 +4,9 @@
         "matrix_seed": "NR",
         "total_brackets": "98"
     },
+    "cbs": {
+        "cbs_rank": "NR"
+    },
     "espn": {
         "bpi": "46",
         "chance_sweet_16": "6.0%",
@@ -19,13 +22,13 @@
     },
     "kenpom": {
         "rating": "49",
-        "sos": "13"
+        "sos": "14"
     },
     "kpi_sports": {
         "kpi_ranking": "45"
     },
     "massey": {
-        "composite": "50"
+        "composite": "49"
     },
     "ncaa": {
         "net_rank": "59"
@@ -46,7 +49,7 @@
         "sos": "29"
     },
     "time": {
-        "time": "Feb 04,  1:57 PM"
+        "time": "Feb 04,  9:38 PM"
     },
     "trank": {
         "current_record": "13-9",
@@ -60,6 +63,7 @@
         "group2": "4-2",
         "group3": "4-0",
         "group4": "3-0",
+        "rpi": "51",
         "sos": "9"
     }
 }
