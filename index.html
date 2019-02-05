@@ -142,7 +142,7 @@
 					
 					<tr>
 						<td>CBS Sports - Jerry Palm Bracketology</td>
-						<td class="r"><span id="cbs-bracket"></span>-seed</td>
+						<td class="r"><span id="cbs-bracket"></span></td>
 					</tr>
 					
 					<tr>
@@ -340,10 +340,9 @@
 			 
 			 kenpom_score = FindScore(json.kenpom.rating);
 			 net_score = FindScore(json.ncaa.net_rank);
-			 ncaa_score = FindScore(json.warrennolan.rpi); // Using live one rather than json.ncaa.rpi_rank for more frequent updates
 			 espn_sor = FindScore(parseInt(json.espn.sor)); // SOR is stronger predictor than BPI
 			 espn_bpi = FindScore(parseInt(json.espn.bpi)); 
-			 // teamrankings_score = parseInt(json.teamrankings.make_tournament); // This one's already a % score
+			 teamrankings_score = parseInt(json.teamrankings.make_tournament); // This one's already a % score
 			 sagarin_score = FindScore(json.sagarin.sagarin_rate);
 			 trank_score = FindScore(json.trank.trank);
 			 kpi_score = FindScore(json.kpi_sports.kpi_ranking);
@@ -351,7 +350,7 @@
 			 intangibles = -7; // Zegarowski broken hand
 			 
 			 //Current formula, multipliers should add to .98 to keep the gauge happy
-			 total_score = ((net_score * .13) + (kenpom_score * .13) + (espn_sor * .13) + (espn_bpi * .13) + (kpi_score * .13) + (sagarin_score * .10) + (trank_score * .08) + (massey_score * .06) + (rpi_score * .09) + intangibles);			 
+			 total_score = ((net_score * .10) + (kenpom_score * .10) + (espn_sor * .10) + (espn_bpi * .10) + (kpi_score * .16) + (sagarin_score * .08) + (trank_score * .06) + (massey_score * .06) + (teamrankings_score * .10) + (rpi_score * .10) + intangibles);			 
 			 
 			 
 			 function StatusCheck(data) {
@@ -374,14 +373,17 @@
 
 			 
 			 
-			 console.log("NCAA NET: " + net_score + "    (16%)");
-			 console.log("Kenpom score (predictive): " + kenpom_score + "    (14%)");
-			 console.log("ESPN SOR score (results-based): " + espn_sor + "    (14%)");
-			 console.log("KPI score (results-based): " + kpi_score + "    (14%)");
-			 console.log("ESPN BPI score (predictive): " + espn_bpi + "    (14%)");
-			 console.log("Sagarin score (predictive): " + sagarin_score + "    (10%)");
-			 console.log("Torvik T-Rank score (predictive): " + trank_score + "    (10%)");
+			 console.log("NCAA NET: " + net_score + "    (10%)");
+			 console.log("Kenpom score (predictive): " + kenpom_score + "    (10%)");
+			 console.log("ESPN SOR score (results-based): " + espn_sor + "    (10%)");
+			 console.log("KPI score (results-based): " + kpi_score + "    (16%)");
+			 console.log("ESPN BPI score (predictive): " + espn_bpi + "    (10%)");
 			 console.log("Massey score (composite): " + massey_score + "    (6%)");
+			 console.log("Sagarin score (predictive): " + sagarin_score + "    (8%)");
+			 console.log("Torvik T-Rank score (predictive): " + trank_score + "    (6%)");
+			 console.log("TeamRankings (RPI-based): " + teamrankings_score + "    (10%)");
+			 console.log("RPI score: " + rpi_score + "    (10%)");
+			 console.log("Intangibles: " + intangibles);
 			 console.log("Total score: " + total_score);
 
 			});		
