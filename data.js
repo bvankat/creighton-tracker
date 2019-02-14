@@ -1,6 +1,6 @@
 {
     "bracketproject": {
-        "matrix_count": "19",
+        "matrix_count": "7",
         "matrix_seed": "NR",
         "total_brackets": "108"
     },
@@ -49,7 +49,7 @@
         "sos": "25"
     },
     "time": {
-        "time": "Feb 13, 11:44 PM"
+        "time": "Feb 13, 11:47 PM"
     },
     "trank": {
         "current_record": "13-12",
