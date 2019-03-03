@@ -229,7 +229,7 @@
   		<br /><br /><br />
   		<p class="small text-muted">Last update: <span id="time"></span>
 	  		
-  		<br />Details: <a href="http://github.com/bvankat/creighton-tracker">Github</a> / Inspiration: <a href="https://www.nytimes.com/2017/12/14/reader-center/nyt-needle-election.html">#nytneedle</a>
+  		<br />Created by <a href="https://twitter.com/bvankat">Ben Vankat</a> / Details: <a href="http://github.com/bvankat/creighton-tracker">Github</a> / Inspiration: <a href="https://www.nytimes.com/2017/12/14/reader-center/nyt-needle-election.html">#nytneedle</a>
   		
   		<br />Sources: <a href="http://www.espn.com/mens-college-basketball/bpi/_/view/resume/group/7">ESPN 1</a>, <a href="http://www.espn.com/mens-college-basketball/bracketology">ESPN 2</a>, <a href="https://kenpom.com/">Kenpom</a>, <a href="https://www.ncaa.com/rankings/basketball-men/d1/ncaa-mens-basketball-net-rankings">NCAA</a>, <a href="https://www.teamrankings.com/ncaa-basketball/team/creighton-bluejays/bracketology">TeamRankings</a>, <a href="http://warrennolan.com/basketball/2019/net-nitty">Warren Nolan</a>, <a href="http://barttorvik.com/team.php?team=Creighton">Bart Torvik</a>, <a href="http://www.kpisports.net/d-i_mbb/2018kpi-d1mbb/">KPI</a>, <a href="http://sagarin.com/sports/cbsend.htm">Sagarin</a>, <a href="http://bracketmatrix.com">Bracket Project</a>, <a href="https://www.masseyratings.com/cb/compare.htm">Massey Ratings</a>, <a href="https://www.cbssports.com/college-basketball/bracketology/">CBS Sports</a>
   		
@@ -349,7 +349,7 @@
 			 kpi_score = FindScore(json.kpi_sports.kpi_ranking);
 			 rpi_score = FindScore(json.warrennolan.rpi);
 			 massey_score = FindScore(json.massey.composite);
-			 intangibles = -3; // Zegarowski injury
+			 intangibles = 0; 
 			 
 			 //Current formula, multipliers should add to .98 to keep the gauge happy
 			 total_score = ((net_score * .10) + (kenpom_score * .10) + (espn_sor * .10) + (espn_bpi * .10) + (kpi_score * .16) + (sagarin_score * .08) + (trank_score * .06) + (massey_score * .06) + (teamrankings_score * .10) + (rpi_score * .10) + intangibles);
