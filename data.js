@@ -1,69 +1,69 @@
 {
     "bracketproject": {
-        "matrix_count": 0,
-        "matrix_seed": 0,
-        "total_brackets": "105"
+        "matrix_count": "33",
+        "matrix_seed": "NR",
+        "total_brackets": "87"
     },
     "cbs": {
-        "cbs_rank": "NR"
+        "cbs_rank": "12-seed"
     },
     "espn": {
-        "bpi": "48",
-        "chance_sweet_16": "0.5%",
+        "bpi": "43",
+        "chance_sweet_16": "2.5%",
         "proj_tourney_seed": "NR",
-        "proj_win_loss_conf": "7.9-10.1",
-        "proj_win_loss_overall": "16.9-14.1",
-        "seven_day_change": "-4",
-        "sor": "65",
-        "sos": "41"
+        "proj_win_loss_conf": "9.0-9.0",
+        "proj_win_loss_overall": "18.6-13.4",
+        "seven_day_change": "0",
+        "sor": "55",
+        "sos": "46"
     },
     "espn_bracketology": {
         "seed": "NR"
     },
     "kenpom": {
-        "rating": "52",
-        "sos": "29"
+        "rating": "49",
+        "sos": "43"
     },
     "kpi_sports": {
-        "kpi_ranking": "51"
+        "kpi_ranking": "41"
     },
     "massey": {
-        "composite": "54"
+        "composite": "44"
     },
     "ncaa": {
-        "net_rank": "57"
+        "net_rank": "54"
     },
     "polls": {
         "ap_rank": "NR",
         "coaches_rank": "NR"
     },
     "sagarin": {
-        "sagarin_rate": "49"
+        "sagarin_rate": "42"
     },
     "teamrankings": {
-        "make_tournament": "16.7%",
+        "make_tournament": "32.1%",
         "most_likely_seed": "11",
-        "projected_losses": "14.2",
-        "projected_wins": "16.8",
-        "rank": "42",
-        "sos": "39"
+        "projected_losses": "13.0",
+        "projected_wins": "18.0",
+        "rank": "38",
+        "sos": "41"
     },
     "time": {
-        "time": "Mar 03,  3:55 PM"
+        "time": "Mar 11,  1:00 PM"
     },
     "trank": {
-        "current_record": "15-13",
-        "trank": "49",
-        "trank_proj_record": "17-14 (8-10)",
+        "current_record": "18-13",
+        "trank": "45",
+        "trank_proj_record": "19-13 (9-9)",
         "trank_seed": "NR"
     },
     "warrennolan": {
-        "current_conf_record": "6-9",
-        "group1": "2-10",
+        "current_conf_record": "9-9",
+        "group1": "3-10",
         "group2": "6-3",
-        "group3": "3-0",
+        "group3": "5-0",
         "group4": "3-0",
-        "rpi": "72",
-        "sos": "17"
+        "rpi": "50",
+        "sos": "14"
     }
 }
