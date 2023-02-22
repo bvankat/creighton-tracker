@@ -1,86 +1,86 @@
 {
     "bracketproject": {
-        "matrix_count": 0,
-        "matrix_seed": "NR",
+        "matrix_count": "114",
+        "matrix_seed": "5",
         "total_brackets": "114"
     },
     "cbs": {
         "cbs_rank": "NR"
     },
     "espn": {
-        "bpi": "108",
-        "chance_round_32": "0.1%",
-        "chance_sweet_16": "0.0%",
-        "proj_tourney_seed": "NR",
-        "proj_win_loss_conf": "8.3-11.7",
-        "proj_win_loss_overall": "15.3-15.7",
-        "seven_day_change": "4",
-        "sor": "61",
-        "sos": "7"
+        "bpi": "12",
+        "chance_round_32": "75.7%",
+        "chance_sweet_16": "41.6%",
+        "proj_tourney_seed": "8",
+        "proj_win_loss_conf": "14.5-5.5",
+        "proj_win_loss_overall": "20.5-10.5",
+        "seven_day_change": "-2",
+        "sor": "30",
+        "sos": "14"
     },
     "espn_bracketology": {
         "seed": "NR"
     },
     "evanmiya": {
-        "miya_rating": "135"
+        "miya_rating": "12"
     },
     "haslametrics": {
-        "haslam_rating": "108"
+        "haslam_rating": "10"
     },
     "kenpom": {
-        "conference_record": "8-12",
-        "overall_record": "15-16",
-        "rating": "91",
-        "record": "14-14",
-        "sos": "8"
+        "conference_record": "14-6",
+        "overall_record": "20-11",
+        "rating": "12",
+        "record": "18-10",
+        "sos": "11"
     },
     "kpi_sports": {
-        "kpi_ranking": 67
+        "kpi_ranking": 33
     },
     "massey_composite": {
-        "massey_rank": "91"
+        "massey_rank": "15"
     },
     "ncaa": {
-        "net_rank": "92"
+        "net_rank": "14"
     },
     "polls": {
-        "ap_rank": "NR",
-        "coaches_rank": "NR"
+        "ap_rank": "19",
+        "coaches_rank": "19"
     },
     "sagarin": {
-        "sagarin_rate": "87"
+        "sagarin_rate": "11"
     },
     "shot_quality": {
-        "sq_ranking": 75
+        "sq_ranking": 13
     },
     "teamrankings": {
-        "make_tournament": "1.4%",
-        "most_likely_seed": "12",
-        "proj_conf_record": "8.3-11.7",
-        "projected_losses": "15.7",
-        "projected_wins": "15.3",
-        "rank": "92"
+        "make_tournament": "100.0%",
+        "most_likely_seed": "6",
+        "proj_conf_record": "14.4-5.6",
+        "projected_losses": "10.6",
+        "projected_wins": "20.4",
+        "rank": "12"
     },
     "time": {
-        "time": "Feb. 22, 2023 at 10:34 AM"
+        "time": "Feb. 22, 2023 at 12:00 PM"
     },
     "trank": {
-        "trank": "109",
-        "trank_make_tourney": "0.3",
-        "trank_proj_record": "15-16 (8-12)",
-        "trank_seed": "NR",
-        "wab_rank": "78",
-        "wab_score": "-1.6"
+        "trank": "12",
+        "trank_make_tourney": "100",
+        "trank_proj_record": "20-11 (14-6)",
+        "trank_seed": "6",
+        "wab_rank": "31",
+        "wab_score": "1.8"
     },
     "warrennolan": {
-        "current_conf_record": "7-10",
-        "elo": "78",
-        "nolan_net": "92",
-        "quadrant_1": "3-10",
-        "quadrant_2": "3-4",
-        "quadrant_3": "2-0",
-        "quadrant_4": "6-0",
-        "record": "92",
-        "rpi": "93"
+        "current_conf_record": "12-5",
+        "elo": "18",
+        "nolan_net": "14",
+        "quadrant_1": "4-7",
+        "quadrant_2": "5-2",
+        "quadrant_3": "5-1",
+        "quadrant_4": "4-0",
+        "record": "14",
+        "rpi": "29"
     }
 }
