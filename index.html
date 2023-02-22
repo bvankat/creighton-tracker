@@ -446,18 +446,18 @@
 			function StatusCheck(data) {
 				 var status_message;
 				 if (data < 20) { status_message = "Nope. Not happening." }
-				 if (data >= 20 && data < 45) { status_message = "It's been a minute since the odds were even this high." }
-				 if (data >= 45 && data < 75) { status_message = "These aren't uncharted waters. But they're very lightly charted." }
-				 if (data >= 75) { status_message = "Believe it when we see it." }
+				 if (data >= 20 && data < 45) { status_message = "Very bubbly." }
+				 if (data >= 45 && data < 75) { status_message = "Feeling pretyt good. Just keep winning." }
+				 if (data >= 75) { status_message = "Get those first-round travel plans booked." }
 				 
 				 return status_message;	 
 			 }
 			 
 				 // Three lines below can automate the status updates based on the total_score. Uncomment to automate. Otherwise, manual status updates are required.
 				 
-				 // message = StatusCheck(total_score);
-				 // console.log(message);
-				 // $('#message').text(message);
+				 message = StatusCheck(total_score);
+				 console.log(message);
+				 $('#message').text(message);
 			
 			
 			 // Note from KPI: Selections have trended toward using results-based metrics - "Who's resume is better?". Predictive metrics help more with seeding - "Who would win between these two?".
