@@ -1,182 +1,198 @@
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    
+   
+  <meta charset="utf-8"> 
+	
   <title>Creighton basketball NCAA tournament odds</title> 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  <meta name="description" content="A machine that calculates how close Creighton is to the Big Dance. Updated every 60 minutes."/>
+  <meta name="description" content="A machine that calculates how close Creighton is to the Big Dance. Updated every couple years."/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <meta property=”og:type” content=”website” />
+  <meta property="og:url" content="http://bvankat.github.io/creighton-tracker" />
+  <meta property="og:title" content="Creighton basketball NCAA tournament odds" />
+  <meta property="og:description" content="A machine that calculates how close Creighton is to the Big Dance. Updated every couple years." />
+  <meta property="og:image" content="/icons/tourney-gauge.jpg" /> 
+  <meta name="theme-color" content="#005ca9" />
 
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:creator" content="@bvankat" />
-  <meta property="og:url" content="http://bvankat.github.com/creighton-tracker" />
-  <meta property="og:title" content="Creighton basketball NCAA tournament odds" />
-  <meta property="og:description" content="A machine that calculates how close Creighton is to the Big Dance. Updated every 60 minutes." />
-  <meta property="og:image" content="http://benvankat.com/projects/nebrasketball/tourney-gauge.jpg" />  <!-- make this image dynamic next year -->
+
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="icon" type="image/png" href="/icons/favicon-192x192.png" sizes="192x192">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/app-icon-180x180.png">
+  <link rel="manifest" href="/site.webmanifest">
 
 
-  <link rel="apple-touch-icon" href="http://benvankat.com/projects/nebrasketball/app-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="../icons/favicon-32x32.png">
+  <link rel="preload" href="/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="/css/bootstrap.min.css"></noscript>
 
-  <link rel="stylesheet" href="https://use.typekit.net/dhj5kzf.css">
-  
+  <link rel="stylesheet" href="/css/adobe-fonts.css">
 
-   	
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	
-	<script type="text/javascript" src="data.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
+	   
+<!-- <script type="text/javascript" src="/data/updates-2023.js"></script> -->
 
 	<style>
-	    body { font-family: sans-serif; }
- 	    h2 { font-family: "factoria", sans-serif; font-weight: bold; text-align: center; }
-	    div.jumbotron { color: #fff; background-color: #005ca9; border-radius: 0; }
-	    .gray {color: #ddd; }
-	    th { text-align: left; }
-	    .r { text-align: right; }
-	    .alert { margin-bottom: 0; }
-	    .big { font-size: 30px; }
+		body { font-family: sans-serif; }
+		.container { max-width: 720px; }
+		 h1 { font-family: "factoria", serif; font-weight: 500; text-align: center; }
+		 h2 { font-size: 1.5rem; }
+		div.jumbotron { color: #fff; background-color: #005ca9; border-radius: 0; padding: 4em 0; margin-bottom: 4em; }
+		.gray {color: #eee; }
+		th { text-align: left; }
+		.table>:not(caption)>*>* { padding: 0.8rem 0; }
+		.alert { margin-bottom: 0; }
+		
+		@media screen and ( max-width: 787px ) {
+			.chart { display: none; }
+		}
 	</style>
-
-
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-129862823-1"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
 	
-	  gtag('config', 'UA-129862823-1');
-	</script>
-    
+	
   </head>
   <body>
-	  	  
-	  	<div class="jumbotron">
-	  	<div class="container">
-	  	
 	  
-	  <h2>Creighton basketball NCAA tournament odds</h2>
-	  <!-- <p class="col-sm-12 text-center gray" style="margin-bottom: 30px;">Updates every 60 minutes</p> -->
+	  <!-- <div class="alert small alert-warning text-center"><strong>Nov. 1: </strong>Time to fire it up again.</div> -->
+
+			
+		  <div class="jumbotron">
+		  <div class="container">
+		  
+	  
+	  <h1>Creighton basketball NCAA tournament odds</h1>
+	  <p class="col-sm-12 text-center gray" style="margin-bottom: 30px;"><em>Updated every couple years</em></p>
 
 	  <div class="row">
-		  	  
-		  		<div id="chart_div" style="width: 350px; height: 350px; margin: 0 auto 40px auto; clear: both;"></div>
-		  		
-		  		<h4 class="col-sm-12 text-center">Status: <span id="message"></span></h4>
-		  		
+				
+				  <div id="chart_div" style="width: 370px; height: 350px; margin: 0 auto 40px auto; clear: both;"></div>
+				  
+				  <p class="col-sm-12 text-center">Status: <span id="message"></span></p>
+				  
 
-    
+	
 		  </div>
 
-  	</div>
-	  	</div>
+	  </div>
+		  </div>
 		
 		<div class="container">  
 		  
 		  <div class="row">
 			  
 		  <div class="col-sm-12">
-			  
-	    
-	    	<table class="table">
-		    	<thead>
-			    	<tr>
-				    	<th>NCAA team-sheet metrics</th>
-				    	<th class="r">Current rating</th>
-			    	</tr>
-		    	</thead>
-		    	
-		    	<tbody>
-			    	<tr><td>Kenpom</td><td id="kenpom-rating" class="r"><span class="small gray">NA</span></td></tr>
-			    	<tr><td>NCAA NET</td><td id="ncaa-net" class="r"><span class="small gray">NA</span></td></tr>
-			    	<tr><td>ESPN BPI</td><td id="espn-rating" class="r"><span class="small gray">NA</span></td></tr>
-			    	<tr><td>ESPN SOR</td><td id="espn-sor" class="r"><span class="small gray">NA</span></td></tr>
-			    	<tr><td>KPI</td><td id="kpi_ranking" class="r">9</td></tr>
-			    	<tr><td>Sagarin</td><td id="sagarin" class="r"><span class="small gray">NA</span></td></tr>
-			    	</tbody>
-	    	</table>
-	    	
-	    	
-	    				<br /><br />
+					   
+			<h2>NCAA team-sheet metrics</h2>
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Service</th>
+						<th class="chart"></th>
+						<th class="text-end">Current rating</th>
+					</tr>
+				</thead>
+				
+				<tbody>
+					<tr><td>NCAA NET</td><td class="chart" id="net-chart"></td><td id="ncaa-net" class="text-end"><span class="small text-muted">NA</span></td></tr>
+					<tr><td>KPI</td><td class="chart" id="kpi-chart"></td><td id="kpi_ranking" class="text-end"><span class="small text-muted">NA</span></td></tr>
+					<tr><td>ESPN SOR</td><td class="chart" id="sor-chart"></td><td id="espn-sor" class="text-end"><span class="small text-muted">NA</span></td></tr>
+					<tr><td>ESPN BPI</td><td class="chart" id="bpi-chart"></td><td id="espn-rating" class="text-end"><span class="small text-muted">NA</span></td></tr>
+					<tr><td>Kenpom</i></td><td class="chart" id="kenpom-chart"></td><td id="kenpom-rating" class="text-end"><span class="small text-muted">NA</span></td></tr>
+					<tr><td>Sagarin</td><td class="chart" id="sagarin-chart"></td><td id="sagarin" class="text-end"><span class="small text-muted">NA</span></td></tr>
+					</tbody>
+			</table>
+			
+			
+						<br /><br />
 			
 		
 			
 			
-			<h4>Other notables</h4>
+			<h2>Other notable rankings</h2>
 			<table class="table">
 				<tbody>
+					<tr><td>Bart Torvik</td><td id="trank-trank" class="text-end"><span class="small text-muted">NA</span></td></tr>
+					
+					
+					<tr><td>RPI</td><td id="nolan-rpi" class="text-end"><span class="small text-muted">NA</span></td></tr>
+					<tr><td>ELO rank</td><td id="nolan-elo" class="text-end"><span class="small text-muted">NA</span></td></tr>
+					<tr><td>Massey Composite</td><td id="massey-rank" class="text-end"><span class="small text-muted">NA</span></td></tr>
+				
+					<tr><td>TeamRankings.com</td><td id="teamrankings-rank" class="text-end"><span class="small text-muted">NA</span></td></tr>
+					<tr><td>Wins Above Bubble</td><td class="text-end"><span id="wab-score" class="small text-muted"> </span><span id="wab-rank"></span></td></tr>
+					<tr><td>Haslametrics</td><td id="haslam-rating" class="text-end"><span class="small text-muted">NA</span></td></tr>
+					<tr><td>Evan Miyakawa</td><td id="miya-rating" class="text-end"><span class="small text-muted">NA</span></td></tr>
+					<tr><td>Shot Quality</td><td id="sq-ranking" class="text-end"><span class="small text-muted">NA</span></td></tr>
 					<tr>
 						<td>AP Poll</td>
-						<td class="r"><span id="ap-rank"><span class="small gray">NA</span></span></td>
+						<td class="text-end"><span id="ap-rank"><span class="small text-muted">NA</span></span></td>
 					</tr>
 					
 					<tr>
 						<td>Coaches Poll</td>
-						<td class="r"><span id="coaches-rank"><span class="small gray">NA</span></span></td>
+						<td class="text-end"><span id="coaches-rank"><span class="small text-muted">NA</span></span></td>
 					</tr>
 					
 					
-					<tr><td>Bart Torvik</td><td id="trank-trank" class="r"><span class="small gray">NA</span></td></tr>
-			    	
-			    	<tr><td>RPI</td><td id="nolan-rpi" class="r"><span class="small gray">NA</span></td></tr>
-		    	
 					
-					
-					<tr>
-						<td>Bracket Project: How many brackets have CU?</td>
-						<td class="r"><span id="bracketproject-count"></span>/<span id="bracketproject-totalbrackets"><span class="small gray">NA</span></span></td>
-					</tr>
-					
-							
-					<tr>
-						<td>ESPN - Joe Lunardi Bracketology</td>
-						<td class="r"><span id="espn-bracketology-seed"><span class="small gray">NA</span></span></td>
-					</tr>
-					<tr>
-						<td>ESPN Sweet 16 chances</td>
-						<td class="r"><span id="espn-sweet16"><span class="small gray">NA</span></span></td>
-					</tr>
-					<tr>
-						<td>CBS Sports - Jerry Palm Bracketology</td>
-						<td class="r"><span id="cbs-bracket"><span class="small gray">NA</span></span></td>
-					</tr>
-					<tr>
-						<td>TeamRankings tournament percentage</td>
-						<td id="teamrankings-rating" class="r"><span class="small gray">NA</span></td>
-					</tr>
-
-
-
 				</tbody>
 			</table>
-	    	
-	    	
-	    	<br /><br />
+			
+			
+			<br /><br />
+			
+			<h2>Chance to make tourney</h2>
+			<table class="table">
+				<tbody>
+					
+					<tr>
+						<td>Torvik T-Ranketology</td>
+						<td id="trank-make-tourney" class="text-end"><span class="small text-muted">NA</span></td>
+					</tr>
+					
+					<tr>
+						<td>TeamRankings.com</td>
+						<td id="teamrankings-rating" class="text-end"><span class="small text-muted">NA</span></td>
+					</tr>
+					
+					<tr>
+						<td>ESPN - NCAA Round of 32 chances</td>
+						<td class="text-end"><span id="espn-round-32"><span class="small text-muted">NA</span></span></td>
+					</tr>
+					
+					
+					<tr>
+						<td>Bracket Project: How many brackets have NU?</td>
+						<td class="text-end"><span id="bracketproject-count"></span>/<span id="bracketproject-totalbrackets"></span></td>
+					</tr>
+					
+				</tbody>
+			</table>
+			
+			<br /><br />
 
-	    	
-	    	<h4>Quadrants</h4>
+			
+			<h2>Quadrants</h2>
 			<div class="table-responsive">
 			<table class="table">
-				<thead>
+				<thead class="small">
 					<tr>
 						<th>NET</th>
 						<th>SOS</th>
-						<th class="r">Group 1</th>
-						<th class="r">Group 2</th>
-						<th class="r">Group 3</th>
-						<th class="r">Group 4</th>
+						<th class="text-end">Quad 1</th>
+						<th class="text-end">Quad 2</th>
+						<th class="text-end">Quad 3</th>
+						<th class="text-end">Quad 4</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td id="ncaa-net2"><span class="small gray">NA</span></td>
-						<td id="warrennolan-sos2"><span class="small gray">NA</span></td>
-						<td id="warrennolan-group1" class="r"><span class="small gray">NA</span></td>
-						<td id="warrennolan-group2" class="r"><span class="small gray">NA</span></td>
-						<td id="warrennolan-group3" class="r"><span class="small gray">NA</span></td>
-						<td id="warrennolan-group4" class="r"><span class="small gray">NA</span></td>
+						<td id="ncaa-net2"><span class="small text-muted">NA</span></td>
+						<td id="quadrants-sos"><span class="small text-muted">NA</span></td>
+						<td id="warrennolan-group1" class="text-end"><span class="small text-muted">NA</span></td>
+						<td id="warrennolan-group2" class="text-end"><span class="small text-muted">NA</span></td>
+						<td id="warrennolan-group3" class="text-end"><span class="small text-muted">NA</span></td>
+						<td id="warrennolan-group4" class="text-end"><span class="small text-muted">NA</span></td>
 					</tr>
 				</tbody>
 			</table>	
@@ -188,243 +204,315 @@
 			
 
 
-	    	
-	    	<h4>Projections <span class="small text-muted">(Current record: <span id="current_record"></span>, <span id="current_conf_record"></span> Big Ten)</h4>
-	    	<table class="table">
-		    	<thead>
-			    	<tr>
-				    	<th>Service</th>
-						<th class="r">Projected W-L</th>
-						<th class="r">Tourney seed</th>
-			    	</tr>
-		    	</thead>
-		    	<tbody>
-			    	<tr><td>ESPN</td><td class="r"><span id="espn-wl"></span> (<span id="espn-cwl"></span>)</td><td class="r"><span id="espn-proj-tourney-seed"></span></tr>
-			    	<tr><td>Kenpom</td><td class="r">23-8 (12-6)</td><td class="r"><span class="small gray">NA</span></td></tr>
-				    <tr><td>Bart Torvik</td><td id="trank-proj" class="r"></td><td class="r"><span id="trank-seed"></span></td></tr>
-				    <tr><td>Bracket Matrix</td><td class="r"><span class="small gray">NA</span></td><td class="r"><span id="bracketproject-seed"></span></td></tr>
-					<tr><td>TeamRankings.com</td><td id="teamrankings_wl" class="r"><span class="small gray">NA</span></td><td class="r"><span id="teamrankings-seed"><span class="small gray">NA</span></span></td></tr>
-			    </tbody>
-			</table>
 			
-
-			
-			<br /><br />
-			
-		<!--	<h4>Upcoming bubble games</h4>
+			<h2>Projections</h2>
+			<p class="text-muted">(Current record: <span id="kenpom-record">0-0</span>, <span id="current_conf_record">0-0</span> Big Ten)</p>
 			<table class="table">
-				<tbody id="todays-games">
+				<thead>
+					<tr>
+						<th>Service</th>
+						<th class="text-end">Projected W-L</th>
+						<th class="text-end">Projected seed</th>
+					</tr>
+				</thead>
+				<tbody>
+					
+					<tr><td>ESPN</td><td class="text-end"><span id="espn-wl"></span> (<span id="espn-cwl"></span>)</td><td class="text-end"><span id="espn-proj-tourney-seed"></span></tr>
+					
+					<tr><td>Bart Torvik</td><td id="trank-proj" class="text-end"></td><td class="text-end"><span id="trank-seed"></span></td></tr>
+					
+					<tr><td>TeamRankings.com</td><td class="text-end"><span id="teamrankings_wl"></span> (<span id="teamrankings-conf-wl"></span>)</td><td class="text-end"><span id="teamrankings-seed"><span class="small text-muted">NA</span></span></td></tr>
+					
+					<tr><td>Kenpom</td><td class="text-end"><span id="kenpom-overall"></span> (<span id="kenpom-conference"></span>)</td><td class="text-end"><span class="small text-muted">NA</span></td></tr>
+					
+					<tr><td>ESPN - Lunardi Bracketology</td><td class="text-end small text-muted">NA</td><td class="text-end"><span id="espn-bracketology-seed"><span class="small text-muted">NA</span></span></td></tr>
+					
+					<tr><td>CBS Sports - Jerry Palm Bracketology</td><td class="text-end small text-muted">NA</td><td class="text-end"><span id="cbs-bracket"><span class="small text-muted">NA</span></span></td></tr>
+					
+					<tr><td>Bracket Matrix</td><td class="text-end"><span class="small text-muted">NA</span></td><td class="text-end" id="bracketproject-seed"><span class="small text-muted">NA</span></td></tr>
+					
 				</tbody>
 			</table>
-		-->	
-		
+			
+
 			
 			<br /><br />
-	    	
-	    </div>
-  	</div>
-  	
-  		<br /><br /><br />
-  		<p class="small text-muted">Last update: <span id="time"></span>
-	  		
-  		<br />Created by <a href="https://twitter.com/bvankat">Ben Vankat</a> / Details: <a href="http://github.com/bvankat/creighton-tracker">Github</a> / Inspiration: <a href="https://www.nytimes.com/2017/12/14/reader-center/nyt-needle-election.html">#nytneedle</a>
-  		
-  		<br />Sources: <a href="http://www.espn.com/mens-college-basketball/bpi/_/view/resume/group/7">ESPN 1</a>, <a href="http://www.espn.com/mens-college-basketball/bracketology">ESPN 2</a>, <a href="https://kenpom.com/">Kenpom</a>, <a href="https://www.ncaa.com/rankings/basketball-men/d1/ncaa-mens-basketball-net-rankings">NCAA</a>, <a href="https://www.teamrankings.com/ncaa-basketball/team/Creighton-cornhuskers/bracketology">TeamRankings</a>, <a href="http://warrennolan.com/basketball/2019/net-nitty">Warren Nolan</a>, <a href="http://barttorvik.com/team.php?team=Creighton">Bart Torvik</a>, <a href="https://faktor.ddns.net/">KPI</a>, <a href="http://sagarin.com/sports/cbsend.htm">Sagarin</a>, <a href="http://bracketmatrix.com">Bracket Project</a>, <a href="https://www.cbssports.com/college-basketball/bracketology/">CBS Sports</a>
-  		
-  		<br />Calculations help: <a href="https://fivethirtyeight.com/features/on-the-ncaa-bubble-heres-the-number-to-watch/">1</a>, <a href="http://thesportsdaily.com/ncaa/analyzing-the-rpi-for-at-large-teams-2/">2</a>, <a href="http://www.kpisports.net/2017/03/14/comparing-advanced-metrics-to-ncaa-1-68-seed-list-2017-edition/">3</a>, <a href="https://www.cbssports.com/college-basketball/news/bracketolgy-ncaa-tournament-rpi-numbers-to-know-through-the-years/">4</a>, <a href="https://www.sbnation.com/college-basketball/2019/3/18/18270907/ncaa-tournament-2019-bracket-march-madness-selection-net-rpi-analytics-kenpom">5</a>, <a href="https://fivethirtyeight.com/methodology/how-our-march-madness-predictions-work-2/">6</a>, <a href="https://twitter.com/KevinPauga/status/1207300776781066240">7</a>
-  		<br />Shout out: <a href="http://brianhelge.com">Brian H.</a></p>
-  	
-  	</div>
-  	
-  	</body>
+			
+		</div>
+	  </div>
+	  
+		  <br /><br /><br />
+		  <p class="small text-muted">Last update: <span id="time"></span></p>
+			  
+		  <p class="small text-muted">Created by <a href="https://twitter.com/bvankat">Ben Vankat</a> / Details: <a href="http://github.com/bvankat/nebrasketball">Github</a> / Shout out: <a href="http://brianhelge.com">Brian H.</a> / Inspiration: <a href="https://www.nytimes.com/2017/12/14/reader-center/nyt-needle-election.html">#nytneedle</a></p>
+		  
+		  <p class="small text-muted">Sources: <a href="http://www.espn.com/mens-college-basketball/bpi/_/view/resume/group/7">ESPN 1</a>, <a href="http://www.espn.com/mens-college-basketball/bracketology">ESPN 2</a>, <a href="https://kenpom.com/">Kenpom</a>, <a href="https://www.ncaa.com/rankings/basketball-men/d1/ncaa-mens-basketball-net-rankings">NCAA</a>, <a href="https://www.teamrankings.com/ncaa-basketball/team/nebraska-cornhuskers/bracketology">TeamRankings</a>, <a href="http://warrennolan.com/basketball/2023/schedule/Nebraska">Warren Nolan</a>, <a href="http://barttorvik.com/team.php?team=Nebraska">Bart Torvik</a>, <a href="https://faktorsports.com/">KPI</a>, <a href="http://sagarin.com/sports/cbsend.htm">Sagarin</a>, <a href="http://bracketmatrix.com">Bracket Project</a>, <a href="https://www.cbssports.com/college-basketball/bracketology/">CBS Sports</a>, <a href="https://haslametrics.com/ratings.php" target="_blank">Haslametrics</a>, <a href="https://evanmiya.com" target="_blank">Evan Miyakawa</a>, <a href="https://shotquality.com/team-standings" target="_blank">Shot Quality</a>,<a href="https://masseyratings.com/cb/compare.htm" target="_blank">Massey Composite</a></p>
+
+		  
+		  <p class="small text-muted">Calculations help: <a href="https://fivethirtyeight.com/features/on-the-ncaa-bubble-heres-the-number-to-watch/">1</a>, <a href="http://thesportsdaily.com/ncaa/analyzing-the-rpi-for-at-large-teams-2/">2</a>, <a href="http://www.kpisports.net/2017/03/14/comparing-advanced-metrics-to-ncaa-1-68-seed-list-2017-edition/">3</a>, <a href="https://www.cbssports.com/college-basketball/news/bracketolgy-ncaa-tournament-rpi-numbers-to-know-through-the-years/">4</a>, <a href="https://www.sbnation.com/college-basketball/2019/3/18/18270907/ncaa-tournament-2019-bracket-march-madness-selection-net-rpi-analytics-kenpom">5</a>, <a href="https://fivethirtyeight.com/methodology/how-our-march-madness-predictions-work-2/">6</a>, <a href="https://twitter.com/KevinPauga/status/1207300776781066240">7</a>, <a href="https://twitter.com/KevinPauga/status/1364564183853973506?s=20">8</a>, <a href="https://twitter.com/KevinPauga/status/1234524830063448064?s=20">9</a>, <a href="https://twitter.com/KevinPauga/status/1207300776781066240?s=20">10</a>, <a href="https://barttorvik.com/resume-compare-all.php">11</a>, <a href="https://heatcheckcbb.com/bracketology-analyzing-impact-of-metrics-in-ncaa-tournament-selection-seeding/" target="_blank">12</a>
+		  </p>
+		  
+		  <br /><br />
+		
+	  
+	  </div>
+	  
+	  </body>
+	  
+		  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
  
  
-      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
- 	
-  	<script>
-	  	
-	  	var total_score;
-	  	
-	  	
-		$.getJSON( "data.js", function( json ) {
-			console.log(json);
+	  <script type="text/javascript">
+		  
+		  async function loadData() {
+			  const response = await fetch('/data/data.js');
+			  const data = await response.json();
+			  console.log(data); 
+			
+			// replace this with NCAA when real NET is released. Nolan is approxiation, but calculated earlier in season
+			// Nolan NET might be sketchy? As of Dec. 5, 2022, doesn't seem like it's getting updates. Review for next year.
+			if ( data.ncaa.net_rank ) {  
+				document.getElementById('ncaa-net').innerHTML = data.ncaa.net_rank; 
+				document.getElementById('ncaa-net2').innerHTML = data.ncaa.net_rank; 
+			}	
+			
+			if ( data.kenpom ) {
+				document.getElementById('kenpom-rating').innerHTML = data.kenpom.rating;
+				document.getElementById('kenpom-overall').innerHTML = data.kenpom.overall_record;
+				document.getElementById('kenpom-conference').innerHTML = data.kenpom.conference_record;
+				document.getElementById('kenpom-record').innerHTML = data.kenpom.record;
+			}
 
-			$('#kenpom-rating').text(json.kenpom.rating);
-			$('#ncaa-net, #ncaa-net2').text(json.ncaa.net_rank); 
-			$('#espn-rating').text(json.espn.bpi);
-			
-			$('#kenpom-sos').text(json.kenpom.sos);
-			$('#espn-sos').text(json.espn.sos);
-			
-			$('#espn-proj-tourney-seed').text(json.espn.proj_tourney_seed);
-			$('#espn-wl').text(json.espn.proj_win_loss_overall);
-			$('#espn-cwl').text(json.espn.proj_win_loss_conf);
-			$('#espn-sor').text(json.espn.sor);
-			$('#espn-sweet16').text(json.espn.chance_sweet_16);
-			$('#espn-bracketology-seed').text(json.espn_bracketology.seed);
-			
-			$('#warrennolan-sos, #warrennolan-sos2').text(json.warrennolan.sos);
-			$('#warrennolan-group1').text(json.warrennolan.group1);
-			$('#warrennolan-group2').text(json.warrennolan.group2);
-			$('#warrennolan-group3').text(json.warrennolan.group3);
-			$('#warrennolan-group4').text(json.warrennolan.group4);
-			$('#nolan-rpi').text(json.warrennolan.rpi);
-			
-			$('#ap-rank').text(json.polls.ap_rank);
-			$('#coaches-rank').text(json.polls.coaches_rank);
-			
-			$('#current_record').text(json.trank.current_record);
-			$('#current_conf_record').text(json.warrennolan.current_conf_record);
-			
-			$('#trank-proj').text(json.trank.trank_proj_record);
-			$('#trank-seed').text(json.trank.trank_seed);
-			$('#sagarin').text(json.sagarin.sagarin_rate);
-			$('#trank-trank').text(json.trank.trank);
-			
-			$('#teamrankings-seed').text(json.teamrankings.most_likely_seed);
-			$('#teamrankings-rating').text(json.teamrankings.make_tournament);
-			
-			//$('#kpi_ranking').text(json.kpi_sports.kpi_ranking);
-			
-			$('#bracketproject-count').text(json.bracketproject.matrix_count);
-			$('#bracketproject-totalbrackets').text(json.bracketproject.total_brackets);
-			$('#bracketproject-seed').text(json.bracketproject.matrix_seed);
+			if ( data.kpi_sports ) {
+				document.getElementById('kpi_ranking').innerHTML = data.kpi_sports.kpi_ranking;
+			}
 
-			$('#cbs-bracket').text(json.cbs.cbs_rank);
+			if ( data.espn ) {
+				document.getElementById('espn-rating').innerHTML = data.espn.bpi;
+				document.getElementById('espn-proj-tourney-seed').innerHTML = data.espn.proj_tourney_seed;
+				document.getElementById('espn-wl').innerHTML = data.espn.proj_win_loss_overall;
+				document.getElementById('espn-cwl').innerHTML = data.espn.proj_win_loss_conf;
+				document.getElementById('espn-sor').innerHTML = data.espn.sor;
+				// document.getElementById('espn-sweet16').innerHTML = data.espn.chance_sweet_16;
+				document.getElementById('espn-round-32').innerHTML = data.espn.chance_round_32;
+				document.getElementById('espn-bracketology-seed').innerHTML = data.espn_bracketology.seed;
+				document.getElementById('quadrants-sos').innerHTML = data.espn.sos;
+			}
+
+			if ( data.warrennolan ) {
+				document.getElementById('warrennolan-group1').innerHTML = data.warrennolan.quadrant_1;
+				document.getElementById('warrennolan-group2').innerHTML = data.warrennolan.quadrant_2;
+				document.getElementById('warrennolan-group3').innerHTML = data.warrennolan.quadrant_3;
+				document.getElementById('warrennolan-group4').innerHTML = data.warrennolan.quadrant_4;
+				document.getElementById('nolan-rpi').innerHTML = data.warrennolan.rpi;
+				document.getElementById('nolan-elo').innerHTML = data.warrennolan.elo;
+				}
+
+			if ( data.polls ) {
+				document.getElementById('ap-rank').innerHTML = data.polls.ap_rank;
+				document.getElementById('coaches-rank').innerHTML = data.polls.coaches_rank;
+			}	
 			
-			var teamrankings_wl = json.teamrankings.projected_wins + "-" + json.teamrankings.projected_losses
-			$('#teamrankings_wl').text(teamrankings_wl);
 			
-			$('#time').text(json.time.time);
+			if ( data.warrennolan ) {
+				// document.getElementById('current_record').innerHTML = data.trank.current_record;
+				document.getElementById('current_conf_record').innerHTML = data.warrennolan.current_conf_record;
+			}
 			
-			if (json.todays_games) {	
-				games = json.todays_games;
-				console.log(games.length + " bubble games today:");
-				console.log(games);
+			if ( data.trank ) {
+				document.getElementById('trank-proj').innerHTML = data.trank.trank_proj_record;
+				document.getElementById('trank-seed').innerHTML = data.trank.trank_seed;
+				document.getElementById('trank-trank').innerHTML = data.trank.trank;
+				
+				var wab_score_styled = "(" + data.trank.wab_score + ") ";
+				document.getElementById('wab-score').innerHTML = wab_score_styled;
+				document.getElementById('wab-rank').innerHTML = data.trank.wab_rank;
 			
-				$.each(games, function(i, game){
-					$('#todays-games').append("<tr><td>" + game.team + " (" + game.rpi + ") " + game.next_opponent + ", " + game.time + "</td></tr>");
-				});
+				var trank_tourney_pct = data.trank.trank_make_tourney + "%";
+			}
+
+			if ( data.haslametrics ) {
+				document.getElementById('haslam-rating').innerHTML = data.haslametrics.haslam_rating;
+			}
 			
-			} else {
-				$('#todays-games').append("<tr><td>No bubble games left today</td></tr>");
-			};
+			if ( data.evanmiya ) {
+				document.getElementById('miya-rating').innerHTML = data.evanmiya.miya_rating;
+			}
 			
-						
-			function FindScore(data) { // Calculate percentage chance based on RPI-like ranking system
+			if ( data.shot_quality ) {
+				document.getElementById('sq-ranking').innerHTML = data.shot_quality.sq_ranking;
+			}
+			
+			document.getElementById('trank-make-tourney').innerHTML = trank_tourney_pct;
+			
+			if ( data.sagarin ) {
+				document.getElementById('sagarin').innerHTML = data.sagarin.sagarin_rate;
+			}
+
+			if ( data.teamrankings ) {
+				document.getElementById('teamrankings-seed').innerHTML = data.teamrankings.most_likely_seed;
+				document.getElementById('teamrankings-rating').innerHTML = data.teamrankings.make_tournament;
+				document.getElementById('teamrankings-rank').innerHTML = data.teamrankings.rank;
+				document.getElementById('teamrankings-conf-wl').innerHTML = data.teamrankings.proj_conf_record;
+				var teamrankings_wl = data.teamrankings.projected_wins + "-" + data.teamrankings.projected_losses
+				document.getElementById('teamrankings_wl').innerHTML = teamrankings_wl;
+			}
+			
+			if ( data.bracketproject ) {
+				document.getElementById('bracketproject-count').innerHTML = data.bracketproject.matrix_count;
+				document.getElementById('bracketproject-totalbrackets').innerHTML = data.bracketproject.total_brackets;
+				document.getElementById('bracketproject-seed').innerHTML = data.bracketproject.matrix_seed;
+			}
+
+			if ( data.cbs ) {
+				document.getElementById('cbs-bracket').innerHTML = data.cbs.cbs_rank;
+			}
+			
+			if ( data.massey_composite ) {
+				document.getElementById('massey-rank').innerHTML = data.massey_composite.massey_rank;
+			}
+			
+			document.getElementById('time').innerHTML = data.time.time;
+
+
+
+			function FindScore(data) { // Calculate percentage chance based on previous at-large bids
 				 var score;
-				 if (data <= 30){ score = 99; }
-				 if (data > 30 && data <= 40) { score = 92; }
-				 if (data > 40 && data <= 43) { score = 85; }
-				 if (data > 43 && data <= 45) { score = 80; }
+				 if (data <= 30){ score = 99; } 
+				 if (data > 30 && data <= 40) { score = 92; } 
+				  if (data > 40 && data <= 43) { score = 80; } 
+				 if (data > 43 && data <= 45) { score = 70; }
 				 if (data > 45 && data <= 47) { score = 55; }
 				 if (data > 47 && data <= 51) { score = 35; }
 				 if (data > 51 && data <= 55) { score = 25; }
-				 if (data > 55 && data <= 60) { score = 15; }
+				 if (data > 55 && data <= 60) { score = 10; }
 				 if (data > 60 && data <= 70) { score = 5; }
-				 if (data > 70 && data <= 80) { score = 2; }
+				 if (data > 70 && data <= 80) { score = 2; } // Highest NET ranking to get bid: 77 in 2022, RPI 74 in 1999 
 				 if (data > 80) { score = 1; }
 				 
 				 return score;
 			 };
 			 
 
+			 // Calculations notes: 
+			 // 2022 Last 4 In: Wyoming (NET 50), Rutgers (77), Indiana (38), Notre Dame (53)
+			 // 2022 First 4 Out: Dayton (NET 58), SMU (NET 45), Texas A&M (NET 43) 
 			 
-			 kenpom_score = FindScore(json.kenpom.rating);
-			 net_score = FindScore(json.ncaa.net_rank);
-			 espn_sor = FindScore(parseInt(json.espn.sor)); // SOR is stronger predictor than BPI
-			 espn_bpi = FindScore(parseInt(json.espn.bpi)); 
-			 teamrankings_score = parseInt(json.teamrankings.make_tournament); // This one's already a % score
-			 sagarin_score = FindScore(json.sagarin.sagarin_rate);
-			 trank_score = FindScore(json.trank.trank);
-			 //kpi_score = FindScore(json.kpi_sports.kpi_ranking);
-			 rpi_score = FindScore(json.warrennolan.rpi);
-			 intangibles = 0; // Don't think any of the systems has a way to value injuries, so we need to add it. Check out sports-reference Win Shares, perhaps. 
-			 
-			 //Current formula, multipliers should add to .98 to keep the gauge happy (Need to add KPI as of Dec. 16)
-			 total_score = ((net_score * .14) + (kenpom_score * .14) + (espn_sor * .14) + (espn_bpi * .13) + (sagarin_score * .11) + (trank_score * .11) + (teamrankings_score * .10) + (rpi_score * .11) + intangibles);
-			 console.log("Total score (calculated): " + total_score);
-			 
+			 // Approx. 500 at-large bids from 2008-2022 
+			 // Only five at-large teams with NET over 70: All 10 or 11 seeds 
+			 // 20 at large bids with NET/RPI above 60 
 
-			 // uncomment next three lines to keep gauge score > 3
-			  if (total_score <= 2) {
-			  total_score = 2;
-			  }
+			 
+			 kenpom_score = FindScore(data.kenpom.rating);
+			 net_score = FindScore(data.ncaa.net_rank);
+			 espn_sor = FindScore(parseInt(data.espn.sor)); // SOR is stronger predictor than BPI. Note: Preseason SOR is 1. That skews the gauge.
+			 espn_bpi = FindScore(parseInt(data.espn.bpi)); 
+			 teamrankings_score = parseInt(data.teamrankings.make_tournament); // This one's already a % score
+			 sagarin_score = FindScore(data.sagarin.sagarin_rate);
+			 torvik_score = parseInt(data.trank.trank_make_tourney);
+			 kpi_score = FindScore(data.kpi_sports.kpi_ranking);
+			 rpi_score = FindScore(data.warrennolan.rpi);
+			 
+			 
+			 // Intangibles: Don't think any of the systems has a way to value injuries and/or hype, so we need to add it. Check out sports-reference Win Shares, perhaps, for injuries data points. 
+			 
+			 intangibles = 0;
+			 intangibles_msg = "";
+			 
+			 // TOTAL SCORE FORMULA
+			 
+			 // Manual total during preseason before rankings released
+			 // total_score = 3;
+
+			//Current formula, multipliers should add to .98 to keep the gauge happy
+			
+			var total_score;
+			
+			// one idea to make life easy early in the season: weight all these the same and then count by the number of available ratings and add em up. (rather than commenting out the empty ones every time.) 
+			
+			// Idea: Add an adjustment for Quad 1 wins and Quad 3/4 losses. 3-4 Q1 wins seems like the high end for 2022 bubble teams. Teams with 3 Q3 losses are very bubbly. Only one team in NET top 70 has more than 1 Q4 loss 
+			
+			total_score = ((net_score * .12) + (espn_sor * .14) + (kpi_score * .14) + (teamrankings_score * .10) + (rpi_score * .10) + (kenpom_score * .10) + (espn_bpi * .10) +  (sagarin_score * .09) + (torvik_score * .09) + intangibles);		 
+			
+			 // next three lines keep gauge score > 3 in the really sad times, uncomment during season
+			 if (total_score <= 2) {
+				 total_score = 2;
+				 console.log("Note: Minimum total_score applied");
+			 }
 			  
-			 			 
-			 function StatusCheck(data) {
+			 
+			 // Manual status updates in offseason
+			function StatusCheck(data) {
 				 var status_message;
-				 if (data < 20) { status_message = "Don't do it. Don't get excited." }
-				 if (data >= 20 && data < 45) { status_message = "Optimism creeping back in. Probably shouldn't do that to yourself." }
-				 if (data >= 45 && data < 75) { status_message = "Feeling pretty OK." }
-				 if (data >= 75) { status_message = "Looking at forecasts for first-round destinations." }
+				 if (data < 20) { status_message = "Nope. Not happening." }
+				 if (data >= 20 && data < 45) { status_message = "It's been a minute since the odds were even this high." }
+				 if (data >= 45 && data < 75) { status_message = "These aren't uncharted waters. But they're very lightly charted." }
+				 if (data >= 75) { status_message = "Believe it when we see it." }
 				 
-				 return status_message;
-				 
+				 return status_message;	 
 			 }
 			 
-			 message = StatusCheck(total_score);
-			 console.log(message);
-
-			 $('#message').text(message);
-
-			 // Note from KPI: Selections have trended toward using results-based metrics. Predictive metrics help more with seeding.
+				 // Three lines below can automate the status updates based on the total_score. Uncomment to automate. Otherwise, manual status updates are required.
+				 
+				 // message = StatusCheck(total_score);
+				 // console.log(message);
+				 // $('#message').text(message);
+			
+			
+			 // Note from KPI: Selections have trended toward using results-based metrics - "Who's resume is better?". Predictive metrics help more with seeding - "Who would win between these two?".
 			 
 			 console.log("NCAA NET: " + net_score + "    (14%)");
-			 console.log("Kenpom score (predictive): " + kenpom_score + "    (14%)");
-			 console.log("ESPN SOR score (results-based): " + espn_sor + "    (13%)");
-			 //console.log("KPI score (results-based): " + kpi_score + "    (16%)");
-			 console.log("ESPN BPI score (predictive): " + espn_bpi + "    (13%)");
-			 console.log("Sagarin score (predictive): " + sagarin_score + "    (11%)");
-			 console.log("Torvik T-Rank score (predictive): " + trank_score + "    (11%)");
-			 console.log("TeamRankings (results-based): " + teamrankings_score + "    (11%)");
-			 console.log("RPI score (results-based): " + rpi_score + "    (11%)");
-			 console.log("Intangibles: " + intangibles);
+			 console.log("ESPN SOR score (results-based): " + espn_sor + "    (14%)");
+			 console.log("KPI score (results-based): " + kpi_score + "    (14%)");
+			 console.log("TeamRankings (results-based): " + teamrankings_score + "    (12%)");
+			 console.log("RPI score (results-based): " + rpi_score + "    (10%)");
+			 console.log("ESPN BPI score (predictive): " + espn_bpi + "    (08%)");
+			 console.log("Kenpom score (predictive): " + espn_bpi + "    (08%)");
+			 console.log("Sagarin score (predictive): " + sagarin_score + "    (08%)");
+			 console.log("Torvik score (predictive): " + torvik_score + "    (8%)");
+			 console.log("Intangibles: " + intangibles + " (" + intangibles_msg + ")");
 			 console.log("Total score: " + total_score);
 
-			});		
-
-				
-			 google.charts.load('current', {'packages':['gauge']});
-			 google.charts.setOnLoadCallback(drawChart);
-
-			 
-			 
+	
+		google.charts.load('current', {'packages':['gauge']});
+		google.charts.setOnLoadCallback(drawChart);
 		
 			 
 	   function drawChart() {
-				      total_score = parseInt(total_score);
+			   
+			   total_score = parseInt(total_score);
 
-        var data = google.visualization.arrayToDataTable([
-          ['Label', 'Value'],
-          ['', total_score],
-        ]);
+			var data = google.visualization.arrayToDataTable([
+			  ['Label', 'Value'],
+			  ['', total_score],
+			]);
+	
+			var options = {
+			  width: 350, height: 350,
+			  redFrom: 75, redTo: 100,
+			  yellowFrom:50, yellowTo: 75,
+			  minorTicks: 10
+			};
+	
+			var chart = new google.visualization.Gauge(document.getElementById('chart_div'));
+	
+			chart.draw(data, options);
+	
 
-        var options = {
-          width: 350, height: 350,
-          redFrom: 75, redTo: 100,
-          yellowFrom:50, yellowTo: 75,
-          minorTicks: 10
-        };
+			// NEEDLE BOUNCE DISABLED IN OFFSEASON
+			setInterval(function() {
+			  data.setValue(0, 1, total_score-1 + Math.round(1 * Math.random()));
+			  chart.draw(data, options);
+			}, 300);
+		 
+		 
+		  };  // end drawChart()
+		  
+	} // end loadData async function
+			
+	loadData(); // MAKES THE MAGIC HAPPEN
+</script>
 
-        var chart = new google.visualization.Gauge(document.getElementById('chart_div'));
-
-
-        chart.draw(data, options);
-
-
-
-
-        setInterval(function() {
-          data.setValue(0, 1, total_score-2 + Math.round(1 * Math.random()));
-          chart.draw(data, options);
-        }, 300);
-     
-     
-      };
-      
-				
-    </script>
-  
   
 </html>
